@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+            <h2><b>{{ word }}</b></h2>
+        <form action='/sendToGame' method='POST'>
+
+            word 1: <input type="text" name="word1"><br>
+            word 2: <input type="text" name="word2"><br>
+            word 3: <input type="text" name="word3"><br>
+            word 4: <input type="text" name="word4"><br>
+            word 5: <input type="text" name="word5"><br>
+            word 6: <input type="text" name="word6"><br>
+            word 7: <input type="text" name="word7"><br>
+            <input type="submit" value="Done!">
+        </form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+            <table>
+                <thead>
+                <tr>
+                    <td><b>Top 10 Scores</b></td>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for item in scoreList %}
+                    <tr>
+                        <td style="padding: 10px;">{{ item.get("name",None) }}</td>
+                        <td style="padding: 10px;">{{ item.get("time",None) }}</td>
+                        <td style="padding: 10px;">{{ item.get("word",None) }}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+        {% if place < 10 %}
+            <h3 style="color:'green';">Congratulations you are placed: {{ place }}</h3>
+        {% else %}
+            <h3>Unfortunately You didnt place top 10, Your place: {{ place }} </h3>
+        {% endif %}
+
+        <h2>
+            <a href="/welcomePage">Try Again</a>
+        </h2>
+{% endblock %}

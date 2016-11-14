@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <p>
+            <h2>Rules:</h2>
+            <ol>
+                <li>Words must be greater than 3 letters</li>
+                <li>Words must be made from letters from the given word</li>
+                <li>You must give 7 words</li>
+                <li>Words Cant be repeated</li>
+                <li>No cheating</li>
+                <li>Timer Begins once you get your word</li>
+                <li>Your score is how long it takes to you to submit 7 valid words</li>
+            </ol>
+        </p>
+       <form action='/startgame' method='POST'>
+            Enter Your Name: <input type="text" name="name"><br>
+
+            <input type="submit" value="Done!">
+        </form>
+{% endblock %}

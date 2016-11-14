@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+        <table>
+            <thead>
+                <tr>
+                    <td>Invalid Words You Entered</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for word in invalidwords %}
+                    <tr>
+                        <td> {{ word }} </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+      </table>
+    <h2>
+        <a href="/welcomePage">Try Again</a>
+    </h2>
+
+{% endblock %}
